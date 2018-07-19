@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Alomari, Mohammed">
+	<link type="text/css" rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/FA/css/all.css">
+
+	<title>HOME</title>
+</head>
+
+<body>
+	<header>
+		<h1>HOME</h1>
+		<h2 id="timeToBeChanged">TIME</h2>
+	</header>
+	<main>
+		<table>
+			<tr>
+				<td>
+					<i class="fab fa-google fa-3x"></i>
+					<p>google</p>
+				</td>
+				<td>
+					<i class="fab fa-slack-hash fa-3x"></i>
+					<p>social media</p>
+				</td>
+				<td>
+					<i class="fas fa-graduation-cap fa-3x"></i>
+					<p>educationals</p>
+				</td>
+				<td>
+					<i class="fas fa-code fa-3x"></i>
+					<p>code</p>
+				</td>
+				<td>
+					<i class="fas fa-cloud-upload-alt fa-3x"></i>
+					<p>hostings</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<i class="fas fa-briefcase fa-3x"></i>
+					<p>office</p>
+				</td>
+				<td>
+					<i class="fas fa-font fa-3x"></i>
+					<p>fonts</p>
+				</td>
+				<td>
+					<i class="fas fa-palette fa-3x"></i>
+					<p>colours</p>
+				</td>
+				<td>
+					<i class="fas fa-book-open fa-3x"></i>
+					<p>readings</p>
+				</td>
+
+			</tr>
+
+		</table>
+	</main>
+</body>
+<script>
+function updateTime() {
+	let getTime = new Date(),
+		_hours = getTime.getHours().toString(),
+		_minutes = getTime.getMinutes().toString();
+	_seconds = getTime.getSeconds().toString();
+
+	let timeTag = document.getElementById("timeToBeChanged");
+	timeTag.innerHTML = _hours + " : " + _minutes + " : " + _seconds;
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+</html>
